@@ -1,42 +1,7 @@
-// Interactividad para el filtrado de propiedades y formulario
+// Interactividad para el formulario y navegación
 
 document.addEventListener('DOMContentLoaded', () => {
-    const filterBtn = document.getElementById('filterBtn');
-    const locationFilter = document.getElementById('locationFilter');
-    const typeFilter = document.getElementById('typeFilter');
     const propertyCards = document.querySelectorAll('.property-card');
-
-    // Filtrado de propiedades con animación
-    filterBtn.addEventListener('click', () => {
-        const selectedLocation = locationFilter.value;
-        const selectedType = typeFilter.value;
-
-        propertyCards.forEach(card => {
-            const cardLocation = card.getAttribute('data-location');
-            const cardType = card.getAttribute('data-type');
-
-            let matchesLocation = (selectedLocation === 'all' || cardLocation === selectedLocation);
-            let matchesType = (selectedType === 'all' || cardType === selectedType);
-
-            if (matchesLocation && matchesType) {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.display = 'block';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                }, 200);
-            } else {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(-20px)';
-                setTimeout(() => {
-                    card.style.display = 'none';
-                }, 300);
-            }
-        });
-    });
 
     // Envío del formulario de contacto
     const contactForm = document.getElementById('contactForm');
@@ -50,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menú móvil toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.querySelector('.nav-menu');
+    const header = document.querySelector('.header');
 
     menuToggle.addEventListener('click', () => {
         const headerHeight = header.offsetHeight;
@@ -83,17 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Header con efecto al hacer scroll
-    const header = document.querySelector('.header');
     const navContainer = document.querySelector('.nav-container');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.height = '90px';
             navContainer.style.height = '90px';
-            header.style.backgroundColor = 'rgba(13, 14, 11, 0.95)';
+            header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
         } else {
             header.style.height = '120px';
             navContainer.style.height = '120px';
-            header.style.backgroundColor = 'rgba(13, 14, 11, 0.9)';
+            header.style.backgroundColor = 'rgba(10, 10, 10, 0.7)';
         }
     });
 
