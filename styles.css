@@ -25,7 +25,8 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: var(--bg-primary);
+    background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.7;
     overflow-x: hidden;
@@ -101,10 +102,11 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(13, 14, 11, 0.9);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-color);
-    transition: height 0.3s ease, background-color 0.3s ease;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    transition: height 0.3s ease, background 0.3s ease;
 }
 
 .nav-container {
@@ -226,9 +228,10 @@ img {
 .hero-image-wrapper {
     width: 100%;
     height: 500px;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .hero-img {
@@ -249,14 +252,17 @@ img {
 }
 
 .search-card {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    background: rgba(17, 17, 17, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     border-radius: 50px;
     padding: 32px 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 160px;
     gap: 24px;
     align-items: end;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .search-group {
@@ -274,8 +280,10 @@ img {
 }
 
 .search-group select {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background: rgba(21, 21, 21, 0.8);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     color: var(--text-primary);
     padding: 16px 24px;
     border-radius: 50px;
@@ -287,7 +295,8 @@ img {
 }
 
 .search-group select:focus {
-    border-color: var(--accent);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
 }
 
 .search-btn {
@@ -328,8 +337,10 @@ img {
 }
 
 .property-card {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    background: rgba(17, 17, 17, 0.5);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(212, 175, 55, 0.12);
     border-radius: 16px;
     overflow: hidden;
     transition: var(--transition);
@@ -340,8 +351,8 @@ img {
 
 .property-card:hover {
     transform: translateY(-8px);
-    border-color: var(--accent);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 175, 55, 0.1);
 }
 
 .property-img-wrap {
@@ -365,16 +376,18 @@ img {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: rgba(10, 10, 10, 0.9);
-    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
     padding: 12px 20px;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 4px;
     border-radius: 50px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     color: var(--accent);
     font-family: var(--font-display);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Sobre Nosotros */
@@ -432,7 +445,8 @@ img {
     height: 500px;
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 .about-img-wrap img {
@@ -488,10 +502,13 @@ img {
 }
 
 .contact-form {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background: rgba(21, 21, 21, 0.6);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     padding: 48px;
     border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
@@ -510,8 +527,10 @@ img {
 
 .form-group input {
     width: 100%;
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-color);
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     color: var(--text-primary);
     padding: 18px 24px;
     border-radius: 50px;
@@ -523,8 +542,10 @@ img {
 
 .form-group textarea {
     width: 100%;
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-color);
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     color: var(--text-primary);
     padding: 18px 24px;
     border-radius: 16px;
@@ -537,8 +558,8 @@ img {
 }
 
 .form-group input:focus, .form-group textarea:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(201, 169, 89, 0.1);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
 /* Footer */
