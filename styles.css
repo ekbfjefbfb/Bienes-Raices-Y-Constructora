@@ -58,7 +58,7 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 36px;
+    padding: 18px 40px;
     font-size: 0.85rem;
     font-weight: 600;
     border-radius: 50px;
@@ -67,28 +67,36 @@ img {
     border: none;
     letter-spacing: 2px;
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
-    background-color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.95);
     color: var(--bg-primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-primary:hover {
-    background-color: var(--text-secondary);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.15);
 }
 
 .btn-outline {
-    background-color: transparent;
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
 }
 
 .btn-outline:hover {
-    border-color: var(--text-primary);
-    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .full-width {
@@ -102,10 +110,10 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(30px) saturate(180%);
-    -webkit-backdrop-filter: blur(30px) saturate(180%);
-    border-bottom: 1px solid var(--border-color);
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     transition: height 0.3s ease, background 0.3s ease;
 }
 
@@ -148,15 +156,19 @@ img {
 
 .btn-contact {
     padding: 12px 24px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50px;
     font-size: 0.8rem;
     letter-spacing: 1px;
     font-weight: 500;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-contact:hover {
-    border-color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .menu-toggle {
@@ -284,10 +296,10 @@ img {
 }
 
 .property-card {
-    background: rgba(17, 17, 17, 0.5);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid var(--border-color);
+    background: rgba(17, 17, 17, 0.4);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
     overflow: hidden;
     transition: var(--transition);
@@ -298,8 +310,8 @@ img {
 
 .property-card:hover {
     transform: translateY(-8px);
-    border-color: var(--text-secondary);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
 .property-img-wrap {
@@ -323,18 +335,18 @@ img {
     position: absolute;
     top: 20px;
     left: 20px;
-    background: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    padding: 12px 20px;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    padding: 14px 24px;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 4px;
     border-radius: 50px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
     font-family: var(--font-display);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Sobre Nosotros */
@@ -449,13 +461,13 @@ img {
 }
 
 .contact-form {
-    background: rgba(21, 21, 21, 0.6);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    border: 1px solid var(--border-color);
+    background: rgba(21, 21, 21, 0.5);
+    backdrop-filter: blur(35px) saturate(180%);
+    -webkit-backdrop-filter: blur(35px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 48px;
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .form-group {
@@ -474,10 +486,10 @@ img {
 
 .form-group input {
     width: 100%;
-    background: rgba(10, 10, 10, 0.6);
-    backdrop-filter: blur(15px) saturate(180%);
-    -webkit-backdrop-filter: blur(15px) saturate(180%);
-    border: 1px solid var(--border-color);
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     color: var(--text-primary);
     padding: 18px 24px;
     border-radius: 50px;
@@ -489,10 +501,10 @@ img {
 
 .form-group textarea {
     width: 100%;
-    background: rgba(10, 10, 10, 0.6);
-    backdrop-filter: blur(15px) saturate(180%);
-    -webkit-backdrop-filter: blur(15px) saturate(180%);
-    border: 1px solid var(--border-color);
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     color: var(--text-primary);
     padding: 18px 24px;
     border-radius: 16px;
@@ -505,8 +517,8 @@ img {
 }
 
 .form-group input:focus, .form-group textarea:focus {
-    border-color: var(--text-secondary);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
 }
 
 /* Footer */
