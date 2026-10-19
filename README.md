@@ -1,13 +1,19 @@
-# AURA Real Estate - Sitio Web Minimalista
+# Bosque Universitario - Sitio Web de Lotificación Premium
 
 ## Descripción
-Sitio web minimalista, innovador y limpio diseñado para una agencia de bienes raíces moderna. Utiliza tipografía moderna (Plus Jakarta Sans), paleta de colores oscura con acentos dorados y fotografías de alta calidad obtenidas de **Pexels**.
+Sitio web minimalista, innovador y limpio diseñado para la lotificación Bosque Universitario. Utiliza tipografía premium (Cormorant Garamond + Plus Jakarta Sans), paleta de colores oscura con acentos dorados y fotografías de alta calidad de los lotes disponibles.
 
 ## Estructura de Archivos
-1. **`index.html`**: Estructura principal de la página (Cabecera, Hero, Filtro, Propiedades, Estudio, Contacto y Footer).
+1. **`index.html`**: Estructura principal de la página (Cabecera, Hero, Filtro, Lotes, Sobre Nosotros, Contacto y Footer).
 2. **`styles.css`**: Estilos modernos con CSS Grid, Flexbox, variables CSS y diseño responsive.
-3. **`script.js`**: Funcionalidad en JavaScript para el filtrado dinámico de propiedades y validación del formulario de contacto.
+3. **`script.js`**: Funcionalidad en JavaScript para el filtrado dinámico de lotes y validación del formulario de contacto.
+4. **`images/`**: Carpeta con todas las imágenes de los lotes y desarrollo.
 
 ## Instrucciones de Uso
-1. Descomprime este archivo ZIP en una carpeta en tu computadora.
-2. Abre el archivo `index.html` en cualquier navegador web moderno (Chrome, Firefox, Safari, Edge) o ábrelo en tu editor de código favorito (como Dreamweaver, VS Code, etc.).
+1. Abre el archivo `index.html` en cualquier navegador web moderno (Chrome, Firefox, Safari, Edge).
+2. Para ver los cambios en tiempo real, usa un servidor local como `python3 -m http.server 8000`.
+
+## Contacto
+- **Nombre**: Ramón Vásquez
+- **WhatsApp**: +504 9558-2163
+- **Email**: Vramonedgardo@gmail.com
