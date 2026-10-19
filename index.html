@@ -49,33 +49,24 @@
         <div class="container">
             <div class="search-card">
                 <div class="search-group">
-                    <label>Ubicación</label>
+                    <label>Manzana</label>
                     <select id="locationFilter">
-                        <option value="all">Todas las manzanas</option>
-                        <option value="valle">Manzanas A-D</option>
-                        <option value="costa">Manzanas E-G</option>
-                        <option value="ciudad">Manzanas F-G</option>
+                        <option value="all">Todas</option>
+                        <option value="valle">A - D</option>
+                        <option value="costa">E - G</option>
+                        <option value="ciudad">Todas</option>
                     </select>
                 </div>
                 <div class="search-group">
-                    <label>Tipo de Lote</label>
+                    <label>Ubicación</label>
                     <select id="typeFilter">
-                        <option value="all">Todos</option>
+                        <option value="all">Todas</option>
                         <option value="villa">Esquina</option>
                         <option value="penthouse">Central</option>
                         <option value="casa">Interior</option>
                     </select>
                 </div>
-                <div class="search-group">
-                    <label>Rango de Precio</label>
-                    <select id="priceFilter">
-                        <option value="all">Cualquier precio</option>
-                        <option value="low">Hasta $500k</option>
-                        <option value="mid">$500k - $1M</option>
-                        <option value="high">Más de $1M</option>
-                    </select>
-                </div>
-                <button class="btn btn-primary search-btn" id="filterBtn">Filtrar</button>
+                <button class="btn btn-primary search-btn" id="filterBtn">Ver Lotes</button>
             </div>
         </div>
     </section>
@@ -93,20 +84,7 @@
                 <article class="property-card" data-location="valle" data-type="villa" data-price="high">
                     <div class="property-img-wrap">
                         <img src="images/img-prop-1.jpeg" alt="Lote Esquina">
-                        <span class="badge">Esquina Premium</span>
-                    </div>
-                    <div class="property-body">
-                        <div class="property-meta">
-                            <span>Manzana A</span>
-                            <span class="price">$1,250,000</span>
-                        </div>
-                        <h3>Lote Horizon</h3>
-                        <p>Lote de esquina con vistas panorámicas, ideal para construir la casa de tus sueños con espacio amplio.</p>
-                        <div class="property-features">
-                            <span>480 m²</span>
-                            <span>20 x 24 m</span>
-                            <span>Esquina</span>
-                        </div>
+                        <span class="badge">A</span>
                     </div>
                 </article>
 
@@ -114,20 +92,7 @@
                 <article class="property-card" data-location="costa" data-type="penthouse" data-price="mid">
                     <div class="property-img-wrap">
                         <img src="images/img-prop-2.jpeg" alt="Lote Central">
-                        <span class="badge">Ubicación Central</span>
-                    </div>
-                    <div class="property-body">
-                        <div class="property-meta">
-                            <span>Manzana B</span>
-                            <span class="price">$890,000</span>
-                        </div>
-                        <h3>Lote Solstice</h3>
-                        <p>Lote central cerca de áreas verdes, perfecto para familias que buscan tranquilidad y naturaleza.</p>
-                        <div class="property-features">
-                            <span>320 m²</span>
-                            <span>16 x 20 m</span>
-                            <span>Central</span>
-                        </div>
+                        <span class="badge">B</span>
                     </div>
                 </article>
 
@@ -135,20 +100,7 @@
                 <article class="property-card" data-location="ciudad" data-type="casa" data-price="low">
                     <div class="property-img-wrap">
                         <img src="images/img-prop-3.jpeg" alt="Lote Compacto">
-                        <span class="badge">Oportunidad</span>
-                    </div>
-                    <div class="property-body">
-                        <div class="property-meta">
-                            <span>Manzana C</span>
-                            <span class="price">$450,000</span>
-                        </div>
-                        <h3>Lote Monolith</h3>
-                        <p>Lote compacto con excelente acceso, ideal para primera inversión o construcción eficiente.</p>
-                        <div class="property-features">
-                            <span>260 m²</span>
-                            <span>13 x 20 m</span>
-                            <span>Acceso Fácil</span>
-                        </div>
+                        <span class="badge">C</span>
                     </div>
                 </article>
 
@@ -156,20 +108,7 @@
                 <article class="property-card" data-location="valle" data-type="villa" data-price="high">
                     <div class="property-img-wrap">
                         <img src="images/img-prop-4.jpeg" alt="Lote Grande">
-                        <span class="badge">Superficie Premium</span>
-                    </div>
-                    <div class="property-body">
-                        <div class="property-meta">
-                            <span>Manzana D</span>
-                            <span class="price">$1,450,000</span>
-                        </div>
-                        <h3>Lote Aurora</h3>
-                        <p>Lote grande con topografía plana, listo para construir con infraestructura completa en el área.</p>
-                        <div class="property-features">
-                            <span>550 m²</span>
-                            <span>22 x 25 m</span>
-                            <span>Plano</span>
-                        </div>
+                        <span class="badge">D</span>
                     </div>
                 </article>
 
@@ -177,20 +116,7 @@
                 <article class="property-card" data-location="costa" data-type="penthouse" data-price="high">
                     <div class="property-img-wrap">
                         <img src="images/img-prop-5.jpeg" alt="Lote Frente">
-                        <span class="badge">Frente a Calle</span>
-                    </div>
-                    <div class="property-body">
-                        <div class="property-meta">
-                            <span>Manzana E</span>
-                            <span class="price">$1,100,000</span>
-                        </div>
-                        <h3>Lote Oceanview</h3>
-                        <p>Lote frente a calle principal con alta visibilidad, excelente para comercio o residencia premium.</p>
-                        <div class="property-features">
-                            <span>380 m²</span>
-                            <span>19 x 20 m</span>
-                            <span>Frente</span>
-                        </div>
+                        <span class="badge">E</span>
                     </div>
                 </article>
 
@@ -198,20 +124,7 @@
                 <article class="property-card" data-location="ciudad" data-type="casa" data-price="mid">
                     <div class="property-img-wrap">
                         <img src="images/img-prop-6.jpeg" alt="Lote Residencial">
-                        <span class="badge">Zona Residencial</span>
-                    </div>
-                    <div class="property-body">
-                        <div class="property-meta">
-                            <span>Manzana F</span>
-                            <span class="price">$680,000</span>
-                        </div>
-                        <h3>Lote Minimal</h3>
-                        <p>Lote en zona residencial tranquila, rodeado de naturaleza y con servicios completos cercanos.</p>
-                        <div class="property-features">
-                            <span>290 m²</span>
-                            <span>14.5 x 20 m</span>
-                            <span>Tranquilo</span>
-                        </div>
+                        <span class="badge">F</span>
                     </div>
                 </article>
 
@@ -219,20 +132,7 @@
                 <article class="property-card" data-location="valle" data-type="villa" data-price="mid">
                     <div class="property-img-wrap">
                         <img src="images/img-prop-7.jpeg" alt="Lote Ecológico">
-                        <span class="badge">Zona Verde</span>
-                    </div>
-                    <div class="property-body">
-                        <div class="property-meta">
-                            <span>Manzana G</span>
-                            <span class="price">$750,000</span>
-                        </div>
-                        <h3>Lote Zenith</h3>
-                        <p>Lote adyacente a áreas verdes protegidas, ambiente ecológico con árboles y espacios recreativos.</p>
-                        <div class="property-features">
-                            <span>340 m²</span>
-                            <span>17 x 20 m</span>
-                            <span>Ecológico</span>
-                        </div>
+                        <span class="badge">G</span>
                     </div>
                 </article>
             </div>

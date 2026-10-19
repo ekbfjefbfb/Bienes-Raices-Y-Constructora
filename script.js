@@ -4,25 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtn = document.getElementById('filterBtn');
     const locationFilter = document.getElementById('locationFilter');
     const typeFilter = document.getElementById('typeFilter');
-    const priceFilter = document.getElementById('priceFilter');
     const propertyCards = document.querySelectorAll('.property-card');
 
     // Filtrado de propiedades con animación
     filterBtn.addEventListener('click', () => {
         const selectedLocation = locationFilter.value;
         const selectedType = typeFilter.value;
-        const selectedPrice = priceFilter.value;
 
         propertyCards.forEach(card => {
             const cardLocation = card.getAttribute('data-location');
             const cardType = card.getAttribute('data-type');
-            const cardPrice = card.getAttribute('data-price');
 
             let matchesLocation = (selectedLocation === 'all' || cardLocation === selectedLocation);
             let matchesType = (selectedType === 'all' || cardType === selectedType);
-            let matchesPrice = (selectedPrice === 'all' || cardPrice === selectedPrice);
 
-            if (matchesLocation && matchesType && matchesPrice) {
+            if (matchesLocation && matchesType) {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 setTimeout(() => {
