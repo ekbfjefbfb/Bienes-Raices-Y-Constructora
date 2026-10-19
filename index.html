@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Inmobiliaria Minimalista</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navegación -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">AURA<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#propiedades" class="nav-link">Propiedades</a>
+                <a href="#nosotros" class="nav-link">Estudio</a>
+                <a href="#contacto" class="nav-link btn-contact">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <span class="hero-tag">Arquitectura & Bienes Raíces</span>
+            <h1>Espacios diseñados para el compás de tu vida.</h1>
+            <p>Descubre residencias exclusivas donde la arquitectura minimalista y la naturaleza convergen en perfecta armonía.</p>
+            <div class="hero-actions">
+                <a href="#propiedades" class="btn btn-primary">Explorar Colección</a>
+                <a href="#contacto" class="btn btn-outline">Agendar Visita</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="images/img-hero-1.jpeg" alt="Arquitectura minimalista moderna" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Filtro de Búsqueda Rápida -->
+    <section class="search-bar-section">
+        <div class="container">
+            <div class="search-card">
+                <div class="search-group">
+                    <label>Ubicación</label>
+                    <select id="locationFilter">
+                        <option value="all">Todas las zonas</option>
+                        <option value="valle">Valle Exclusivo</option>
+                        <option value="costa">Costa & Mar</option>
+                        <option value="ciudad">Metrópolis</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <label>Tipo de Propiedad</label>
+                    <select id="typeFilter">
+                        <option value="all">Todos</option>
+                        <option value="villa">Villa</option>
+                        <option value="penthouse">Penthouse</option>
+                        <option value="casa">Casa de Autor</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <label>Rango de Precio</label>
+                    <select id="priceFilter">
+                        <option value="all">Cualquier precio</option>
+                        <option value="low">Hasta $500k</option>
+                        <option value="mid">$500k - $1M</option>
+                        <option value="high">Más de $1M</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary search-btn" id="filterBtn">Filtrar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Propiedades -->
+    <section id="propiedades" class="properties-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Propiedades Destacadas</h2>
+                <p>Una selección curada de residencias con estándares arquitectónicos superiores.</p>
+            </div>
+
+            <div class="property-grid" id="propertyGrid">
+                <!-- Propiedad 1 -->
+                <article class="property-card" data-location="valle" data-type="villa" data-price="high">
+                    <div class="property-img-wrap">
+                        <img src="images/img-prop-1.jpeg" alt="Villa Horizon">
+                        <span class="badge">Villa Exclusiva</span>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-meta">
+                            <span>Valle Exclusivo</span>
+                            <span class="price">$1,250,000</span>
+                        </div>
+                        <h3>Villa Horizon</h3>
+                        <p>Diseño abierto con ventanales de suelo a techo, piscina infinita y acabados en piedra natural.</p>
+                        <div class="property-features">
+                            <span>4 Dormitorios</span>
+                            <span>5 Baños</span>
+                            <span>480 m²</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Propiedad 2 -->
+                <article class="property-card" data-location="costa" data-type="penthouse" data-price="mid">
+                    <div class="property-img-wrap">
+                        <img src="images/img-prop-2.jpeg" alt="Penthouse Solstice">
+                        <span class="badge">Vista al Mar</span>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-meta">
+                            <span>Costa & Mar</span>
+                            <span class="price">$890,000</span>
+                        </div>
+                        <h3>Penthouse Solstice</h3>
+                        <p>Impresionante terraza panorámica 360°, domótica integrada y diseño interior minimalista.</p>
+                        <div class="property-features">
+                            <span>3 Dormitorios</span>
+                            <span>3.5 Baños</span>
+                            <span>320 m²</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Propiedad 3 -->
+                <article class="property-card" data-location="ciudad" data-type="casa" data-price="low">
+                    <div class="property-img-wrap">
+                        <img src="images/img-prop-3.jpeg" alt="Casa Monolith">
+                        <span class="badge">Autoría</span>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-meta">
+                            <span>Metrópolis</span>
+                            <span class="price">$450,000</span>
+                        </div>
+                        <h3>Casa Monolith</h3>
+                        <p>Hormigón visto, patios internos privados y una iluminación cenital excepcional.</p>
+                        <div class="property-features">
+                            <span>3 Dormitorios</span>
+                            <span>2.5 Baños</span>
+                            <span>260 m²</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Propiedad 4 -->
+                <article class="property-card" data-location="valle" data-type="villa" data-price="high">
+                    <div class="property-img-wrap">
+                        <img src="images/img-prop-4.jpeg" alt="Residencia Aurora">
+                        <span class="badge">Villa Premium</span>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-meta">
+                            <span>Valle Exclusivo</span>
+                            <span class="price">$1,450,000</span>
+                        </div>
+                        <h3>Residencia Aurora</h3>
+                        <p>Jardines zen, terraza con jacuzzi y sistema de iluminación inteligente en toda la propiedad.</p>
+                        <div class="property-features">
+                            <span>5 Dormitorios</span>
+                            <span>6 Baños</span>
+                            <span>550 m²</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Propiedad 5 -->
+                <article class="property-card" data-location="costa" data-type="penthouse" data-price="high">
+                    <div class="property-img-wrap">
+                        <img src="images/img-prop-5.jpeg" alt="Penthouse Oceanview">
+                        <span class="badge">Ocean Front</span>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-meta">
+                            <span>Costa & Mar</span>
+                            <span class="price">$1,100,000</span>
+                        </div>
+                        <h3>Penthouse Oceanview</h3>
+                        <p>Acceso directo a la playa, cocina gourmet y terraza infinity con vistas al océano.</p>
+                        <div class="property-features">
+                            <span>4 Dormitorios</span>
+                            <span>4 Baños</span>
+                            <span>380 m²</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Propiedad 6 -->
+                <article class="property-card" data-location="ciudad" data-type="casa" data-price="mid">
+                    <div class="property-img-wrap">
+                        <img src="images/img-prop-6.jpeg" alt="Casa Minimal">
+                        <span class="badge">Diseño Contemporáneo</span>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-meta">
+                            <span>Metrópolis</span>
+                            <span class="price">$680,000</span>
+                        </div>
+                        <h3>Casa Minimal</h3>
+                        <p>Líneas puras, espacios fluidos y una integración perfecta entre interior y exterior.</p>
+                        <div class="property-features">
+                            <span>3 Dormitorios</span>
+                            <span>3 Baños</span>
+                            <span>290 m²</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Propiedad 7 -->
+                <article class="property-card" data-location="valle" data-type="villa" data-price="mid">
+                    <div class="property-img-wrap">
+                        <img src="images/img-prop-7.jpeg" alt="Villa Zenith">
+                        <span class="badge">Villa Serenidad</span>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-meta">
+                            <span>Valle Exclusivo</span>
+                            <span class="price">$750,000</span>
+                        </div>
+                        <h3>Villa Zenith</h3>
+                        <p>Patio central con jardín vertical, sistema de agua caliente solar y materiales sostenibles.</p>
+                        <div class="property-features">
+                            <span>3 Dormitorios</span>
+                            <span>3 Baños</span>
+                            <span>340 m²</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <span class="hero-tag">Filosofía AURA</span>
+                <h2>Menos ornamentación, más esencia.</h2>
+                <p>Creemos que el verdadero lujo reside en la pureza de las líneas, la amplitud espacial y la luz natural. Cada propiedad en nuestro catálogo ha sido seleccionada bajo rigurosos criterios estéticos y estructurales.</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <strong>+120</strong>
+                        <span>Proyectos Entregados</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>99%</strong>
+                        <span>Clientes Satisfechos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img-wrap">
+                <img src="images/img-about-1.jpeg" alt="Interior minimalista">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <span class="hero-tag">Inicia tu inversión</span>
+                <h2>Conversemos sobre tu próximo espacio.</h2>
+                <p>Nuestros asesores inmobiliarios están listos para ofrecerte una atención personalizada y discreta.</p>
+                <ul class="contact-list">
+                    <li><strong>Contacto:</strong> Ramón Vásquez</li>
+                    <li><strong>WhatsApp:</strong> +504 9558-2163</li>
+                    <li><strong>Email:</strong> Vramonedgardo@gmail.com</li>
+                </ul>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Alberto Rivera">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" required placeholder="correo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje o Interés</label>
+                    <textarea id="mensaje" rows="4" required placeholder="Cuéntanos qué tipo de propiedad buscas..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#" class="logo">AURA<span>.</span></a>
+            <p>&copy; 2026 AURA Real Estate. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">IG</a>
+                <a href="#">LN</a>
+                <a href="#">BE</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
