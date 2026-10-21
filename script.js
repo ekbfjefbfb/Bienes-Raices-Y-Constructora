@@ -28,16 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.style.top = headerHeight + 'px';
             navMenu.style.left = '0';
             navMenu.style.width = '100%';
-            navMenu.style.backgroundColor = 'var(--bg-secondary)';
-            navMenu.style.padding = '24px';
+            navMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.98)';
+            navMenu.style.padding = '24px 20px';
+            navMenu.style.gap = '20px';
             navMenu.style.borderBottom = '1px solid var(--border-color)';
         }
     });
 
-    // Scroll suave para navegación
+    // Scroll suave para navegación y autocierre de menú en móviles
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+            if (window.innerWidth <= 900 && navMenu) {
+                navMenu.style.display = 'none';
+            }
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({
@@ -48,19 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Header con efecto al hacer scroll
+    // Header con efecto al hacer scroll adaptativo
     const navContainer = document.querySelector('.nav-container');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.height = '90px';
-            navContainer.style.height = '90px';
-            header.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+    const updateHeaderScroll = () => {
+        const isMobile = window.innerWidth <= 768;
+        if (window.scrollY > 30) {
+            header.style.height = isMobile ? '70px' : '85px';
+            navContainer.style.height = isMobile ? '70px' : '85px';
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.98)';
         } else {
-            header.style.height = '120px';
-            navContainer.style.height = '120px';
-            header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            header.style.height = isMobile ? '75px' : '110px';
+            navContainer.style.height = isMobile ? '75px' : '110px';
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
         }
-    });
+    };
+    window.addEventListener('scroll', updateHeaderScroll);
+    window.addEventListener('resize', updateHeaderScroll);
+    updateHeaderScroll();
 
     // Animación de entrada para tarjetas
     const observerOptions = {
