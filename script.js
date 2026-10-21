@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.scrollY > 50) {
             header.style.height = '90px';
             navContainer.style.height = '90px';
-            header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
         } else {
             header.style.height = '120px';
             navContainer.style.height = '120px';
-            header.style.backgroundColor = 'rgba(10, 10, 10, 0.7)';
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
         }
     });
 

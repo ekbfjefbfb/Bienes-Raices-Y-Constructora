@@ -1,4 +1,4 @@
-# Bosque Universitario - Sitio Web de Lotificación Premium
+# Bosque Universitario - Sitio Web de Lotificación
 
 ## Descripción
 Sitio web minimalista, innovador y limpio diseñado para la lotificación Bosque Universitario. Utiliza tipografía premium (Cormorant Garamond + Plus Jakarta Sans), paleta de colores oscura con acentos dorados y fotografías de alta calidad de los lotes disponibles.
