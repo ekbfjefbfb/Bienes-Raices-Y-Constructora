@@ -1,7 +1,7 @@
-# Bosque Universitario - Sitio Web de Lotificación
+# Bienes Raíces y Más - Catacamas, Olancho
 
 ## Descripción
-Sitio web minimalista, innovador y limpio diseñado para la lotificación Bosque Universitario. Utiliza tipografía premium (Cormorant Garamond + Plus Jakarta Sans), paleta de colores oscura con acentos dorados y fotografías de alta calidad de los lotes disponibles.
+Sitio web minimalista, innovador y limpio diseñado para Bienes Raíces y Más en Catacamas, Olancho. Ofrece opciones inmobiliarias y comerciales completas: locales comerciales, casas, vehículos y lotes disponibles con tipografía premium y diseño oscuro puro de alto impacto.
 
 ## Estructura de Archivos
 1. **`index.html`**: Estructura principal de la página (Cabecera, Hero, Filtro, Lotes, Sobre Nosotros, Contacto y Footer).
